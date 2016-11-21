@@ -18,7 +18,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 % A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+\documentclass[11pt, letterpaper]{awesome-cv}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -29,7 +29,7 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-emerald}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -46,27 +46,27 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-
+\newcommand*{\at}{@}
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
-\name{Claud D.}{Park}
-\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
-\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+\name{Alter}{Lagos}
+\position{Software Engineer{\enskip\cdotp\enskip}Senior Web Developer}
+% \address{}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
+\mobile{(+56) 9-7554-7072}
+\email{alt.lagos\at gmail.com}
+% \homepage{}
+\github{alagos}
+\linkedin{alterlagos}
+\stackoverflow{895789}{alter-lagos}
+% \twitter{}
+\skype{alterstrife}
 % \reddit{reddit-id}
 % \extrainfo{extra informations}
 
-\quote{``Must be the change that you want to see in the world."}
+% \quote{}
 
 
 %-------------------------------------------------------------------------------
@@ -79,7 +79,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Résumé}
+  {Alter Lagos~~~·~~~Résumé}
   {\thepage}
 
 
@@ -88,14 +88,15 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 % \input{resume/summary.tex}
-\input{resume/education.tex}
 \input{resume/skills.tex}
 \input{resume/experience.tex}
-\input{resume/extracurricular.tex}
-\input{resume/honors.tex}
+\newpage
+\input{resume/education.tex}
 \input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
+\input{resume/extracurricular.tex}
+% \input{resume/honors.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
 
 
 %-------------------------------------------------------------------------------
