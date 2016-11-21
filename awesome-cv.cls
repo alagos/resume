@@ -670,3 +670,6 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+% Just makes a @ symbol, hopefully to avoid getting my email from crawlers
+\newcommand*{\at}{@}
