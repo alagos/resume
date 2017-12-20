@@ -17,3 +17,9 @@ Follow the instructions... wait a lot and then compile with:
 ```bash
 xelatex resume.tex
 ```
+
+Alternately, using docker you could use something like:
+
+```bash
+docker run -v /home/alter/workspace/resume/:/doc/ -t -i thomasweise/texlive
+```
