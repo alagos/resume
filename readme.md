@@ -9,17 +9,17 @@ First, installing TeX with an [updated script](https://github.com/scottkosty/ins
 ```bash
 wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu
 chmod +x ./install-tl-ubuntu
-sudo ./install-tl-ubuntu
-```
-
-Follow the instructions... wait a lot and then compile with:
-
-```bash
-xelatex resume.tex
+sudo ./install-tl-ubuntu # Here just follow the instructions
 ```
 
 Alternately, using docker you could use something like:
 
 ```bash
-docker run -v /home/alter/workspace/resume/:/doc/ -t -i thomasweise/texlive
+docker run -v $(pwd):/doc/ -t -i thomasweise/texlive:1.0.0
+```
+
+then finally compile with:
+
+```bash
+xelatex resume.tex
 ```
