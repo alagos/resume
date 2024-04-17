@@ -2,24 +2,34 @@
 
 Using [Awesome-CV](https://github.com/posquit0/Awesome-CV) as base.
 
-## Installing and compile
+Pre-requisite: Docker
 
-First, installing TeX with an [updated script](https://github.com/scottkosty/install-tl-ubuntu)
+## Compile resume.pdf
 
+Define an alias in your `.zshrc`:
 ```bash
-wget https://github.com/scottkosty/install-tl-ubuntu/raw/master/install-tl-ubuntu
-chmod +x ./install-tl-ubuntu
-sudo ./install-tl-ubuntu # Here just follow the instructions
+
+echo "alias resume='docker run --rm --user $(id -u):$(id -g) -i -w "/doc" -v "$PWD":/doc thomasweise/texlive:1.0.0 make'" >> ~/.zshrc
+source ~/.zshrc
+resume
 ```
 
-Alternately, using docker you could use something like:
-
+or a longer way accessing the container:
 ```bash
 docker run -v $(pwd):/doc/ -t -i thomasweise/texlive:1.0.0
+xelatex resume.tex
 ```
 
-then finally compile with:
+## Cover letters
+
+Make sure to update the submodule with the private cover letters repo:
 
 ```bash
-xelatex resume.tex
+git submodule update
+```
+
+then call:
+
+```bash
+resume cover/the-cover-letter
 ```
